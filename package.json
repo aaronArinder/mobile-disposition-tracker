@@ -14,10 +14,11 @@
     }
   },
   "dependencies": {
-    "vuex": "^3.0.1",
+    "nativescript-sqlite": "^2.2.3",
     "nativescript-theme-core": "^1.0.4",
     "nativescript-vue": "^2.0.0",
-    "tns-core-modules": "^4.2.0"
+    "tns-core-modules": "^4.2.0",
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
@@ -30,7 +31,7 @@
     "copy-webpack-plugin": "^4.5.2",
     "css-loader": "^1.0.0",
     "lazy": "1.0.11",
-    "nativescript-dev-webpack": "next",
+    "nativescript-dev-webpack": "^0.18.0-2018-11-07-170758-02",
     "nativescript-vue-template-compiler": "^2.0.0",
     "nativescript-worker-loader": "~0.9.0",
     "node-sass": "^4.9.2",
