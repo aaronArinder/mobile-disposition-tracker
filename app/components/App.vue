@@ -1,11 +1,16 @@
 <template>
   <Page class="page">
-    <ActionBar class="action-bar" title="Disposition"></ActionBar>
+    <ActionBar class="action-bar" title="Disposition Tracker"></ActionBar>
     <GridLayout rows="auto, *" columns="*">
       <StackLayout class="form" row="0" col="0">
         <StackLayout class="input-field">
           <Label text="Current Disposition" class="label font-weight-bold m-b-5" />
           <TextField class="input" v-model="input.disposition" />
+          <StackLayout class="hr-light"></StackLayout>
+        </StackLayout>
+        <StackLayout class="input-field">
+          <Label text="Context" class="label font-weight-bold m-b-5" />
+          <TextField class="input" v-model="input.context" />
           <StackLayout class="hr-light"></StackLayout>
         </StackLayout>
         <GridLayout rows="auto, auto" columns="*, *">
@@ -18,6 +23,8 @@
         <v-template>
           <StackLayout class="list-group-item">
             <Label v-bind:text="disposition.disposition" />
+            <Label v-bind:text="disposition.context" />
+            <Label v-bind:text="disposition.date | date" />
           </StackLayout>
         </v-template>
       </ListView>
@@ -32,6 +39,7 @@
       return {
         input: {
           disposition: '',
+          context: '',
         }
       }
     },
@@ -44,21 +52,15 @@
       },
       clear(){
         this.input.disposition = '';
+        this.input.context = '';
       },
     },
   }
 </script>
 
 <style scoped>
-    ActionBar {
-        background-color: #53ba82;
-        color: #ffffff;
-    }
-
-    .message {
-        vertical-align: center;
-        text-align: center;
-        font-size: 20;
-        color: #333333;
-    }
+  ActionBar {
+    background-color: #53ba82;
+    color: #ffffff;
+  }
 </style>
