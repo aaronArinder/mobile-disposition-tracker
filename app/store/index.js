@@ -36,7 +36,7 @@ const store = new Vuex.Store({
     init(context){
       (new sqlite('my.db')).then(db => {
         // clean db for each dev run
-        db.execSQL("DROP TABLE IF EXISTS dispositions");
+        //db.execSQL("DROP TABLE IF EXISTS dispositions");
         db.execSQL("CREATE TABLE IF NOT EXISTS dispositions (id INTEGER PRIMARY KEY AUTOINCREMENT, disposition TEXT, context TEXT, date TEXT)").then(id => {
           context.commit('init', { database: db });
         }, err => {
