@@ -15,8 +15,6 @@
         </StackLayout>
         <GridLayout rows="auto, auto" columns="*, *">
           <Button text="Save" @tap="save" class="btn btn-primary" row="0" col="0" />
-          <Button text="Load" @tap="load" class="btn btn-primary" row="0" col="1"  />
-          <Button text="Clear" @tap="clear" class="btn btn-primary" row="1" col="0" colSpan="2"  />
         </GridLayout>
       </StackLayout>
       <ListView for="disposition in $store.state.data" class="list-group" row="1" col="0">
@@ -46,13 +44,6 @@
     methods: {
       save(){
         this.$store.dispatch('insert', this.input);
-      },
-      load(){
-        this.$store.dispatch('query');
-      },
-      clear(){
-        this.input.disposition = '';
-        this.input.context = '';
       },
     },
   }
