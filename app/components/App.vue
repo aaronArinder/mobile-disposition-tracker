@@ -33,11 +33,12 @@
 <script>
   export default {
     data(){
+      this.$store.dispatch('query'); // load in past entries
       return {
         input: {
           disposition: '',
           context: '',
-        }
+        },
       }
     },
     methods: {
