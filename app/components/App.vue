@@ -20,9 +20,9 @@
       <ListView for="disposition in $store.state.data.slice().reverse()" class="list-group" row="1" col="0">
         <v-template>
           <StackLayout class="list-group-item">
-            <Label v-bind:text="disposition.disposition" />
-            <Label v-bind:text="disposition.context" />
-            <Label v-bind:text="disposition.date | date" />
+            <Label textWrap="true" class="dispo-title" v-bind:text="disposition.disposition" />
+            <Label textWrap="true" class="dispo-body" v-bind:text="disposition.context" />
+            <Label textWrap="true" class="dispo-date" v-bind:text="disposition.date | date" />
           </StackLayout>
         </v-template>
       </ListView>
@@ -53,5 +53,15 @@
   ActionBar {
     background-color: #53ba82;
     color: #ffffff;
+  }
+  .dispo-title {
+    font-weight: bold;
+    padding: 0;
+  }
+  .dispo-body {
+    padding: 5rem 0 5rem 0;
+  }
+  .dispo-date {
+    font-style: italic;
   }
 </style>
