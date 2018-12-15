@@ -47,7 +47,8 @@ const store = new Vuex.Store({
       })
     },
     insert(context, data){
-      context.state.database.execSQL("INSERT INTO dispositions (disposition, context, date) VALUES (?,?,?)", [data.disposition, data.context, new Date()]).then(id => {
+      data.date = new Date();
+      context.state.database.execSQL("INSERT INTO dispositions (disposition, context, date) VALUES (?,?,?)", [data.disposition, data.context, data.date]).then(id => {
         context.commit("save", { data: data });
       }, err => {
         console.log('insert err', err);
