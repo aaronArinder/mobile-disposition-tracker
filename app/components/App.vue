@@ -17,7 +17,7 @@
           <Button text="Save" @tap="save" class="btn btn-primary" row="0" col="0" />
         </GridLayout>
       </StackLayout>
-      <ListView for="disposition in $store.state.data" class="list-group" row="1" col="0">
+      <ListView for="disposition in $store.state.data.slice().reverse()" class="list-group" row="1" col="0">
         <v-template>
           <StackLayout class="list-group-item">
             <Label v-bind:text="disposition.disposition" />
