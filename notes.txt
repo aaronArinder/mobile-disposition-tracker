@@ -1,0 +1,14 @@
+high-level planning
+  - track what to do to make this particular day a good one
+  - track self-suggested improvement and its outcome
+    - track outcome with :+!: :-1:
+    - remove ineffective improvemnets after some number of :-1:
+  - track deepest wants/needs
+
+low-level implemnetation
+  - comment files: way too hard to come back to this after time away
+  - center Save button
+
+general to-dos
+  - plan out self-suggestion feature
+
