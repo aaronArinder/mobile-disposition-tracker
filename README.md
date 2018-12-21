@@ -4,6 +4,7 @@
 
 ## Usage
 
+CLI:
 ```
 # Install dependencies
 npm install
@@ -17,4 +18,4 @@ tns debug <platform> --bundle
 # Build, watch for changes and run the application
 tns run <platform> --bundle
 ```
-
+native-script also has a cool app for the GUI-lovers: https://www.nativescript.org/nativescript-sidekick
