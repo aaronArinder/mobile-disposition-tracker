@@ -1,0 +1,43 @@
+PROJECT: random alerts for input
+  - mvp: alert for input
+    - push notification
+    - randomly send push notification
+  - core feature(s)
+    - block off times to not be alerted
+    - snooze feature
+      - pausing for M minutes
+      - no more notifications today
+    - de-randomizer: allow specific times to be set for alerts
+      - doesn't turn randomizer off
+
+PROJECT: core
+  - clear inputs after saving
+  - confirmation that it was saved
+  - edit past entries
+  - delete past entries
+  - filter entries
+    - filter on disposition
+    - tags: location of user (physical placement; e.g., work, school, home)
+      - the thinking behind this is that we want an emotion agnostic indicator
+        of disposition
+
+PROJECT: self-suggestion feature
+  - figure out way to accumulate those suggestions that worked for the user in
+    our db, not theirs
+      - big idea: we need to create a pool of suggestions to relate to those
+        self-suggestions that worked for the user; this is the data we'll use
+        with KNN to provide suggestions the user hasn't thought about
+
+PROJECT: ux/ui design decisions
+  - come up with design language
+    - how are we going to indicate to the user what they should do?
+    - how do we reinforce behavior? what behavhior do we want?
+    - what queues do we want to use?
+      - e.g., first time users for the alerts should see a message
+        for what they're about to do
+    - standardize action colors and flow
+      - e.g., red (or something) for delete-like buttons
+        - make opposite of submit
+      - flow: where to _always_ place action buttons
+
+
