@@ -1,5 +1,9 @@
 import Vue from 'nativescript-vue'
 
+/*
+ * filters {Object}: an object whose keys are filter names, and whose values are
+ *   functions that do the actual filtering.
+ * */
 const filters = {
   date: Vue.filter('date', (date) => {
     // undef first load
