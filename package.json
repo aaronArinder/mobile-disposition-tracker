@@ -2,7 +2,7 @@
   "name": "welby",
   "version": "1.0.0",
   "description": "A native application built with NativeScript-Vue",
-  "author": "Aaron Arinder <aaronarinder@gmail.com>",
+  "author": "Aaron, Liz, and David Arinder",
   "license": "MIT",
   "nativescript": {
     "id": "org.nativescript.application",
